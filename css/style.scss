@@ -8,7 +8,7 @@ $carousel-item-height: 300px;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
 	margin:0px auto;
-	padding: $pad-up-dn $pad-left-right;
+	padding: $pad-up-dn $pad-left-right $pad-up-dn $pad-left-right;
 }
 
 .row-header{
@@ -32,7 +32,7 @@ $carousel-item-height: 300px;
     color:floralwhite;
 }
 
-address{
+.address{
     font-size:80%;
     margin:0px;
     color:#0f0f0f;
