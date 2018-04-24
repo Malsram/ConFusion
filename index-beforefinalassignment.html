@@ -30,10 +30,9 @@
                     <li class="nav-item"><a class="nav-link" href="Contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a id="loginscript">
+                    <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
-                    
                 </span>
               </div>
         </div>
@@ -87,7 +86,8 @@
                       <img src="img/logo.png" class="image-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                      <a id="reservescript" role="button" class="btn btn-warning btn-block btn-sm">
+                      <a role="button" class="btn btn-warning btn-block btn-sm"
+                         data-toggle="modal" data-target="#ReserveModal">
                         Reserve Table
                       </a>
                 </div>
@@ -275,17 +275,9 @@
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
    <script>
     $(document).ready(function(){
-        $("#loginscript").click(function() {
-            $("#loginModal").modal();
-        });
-
-        $("#reservescript").click(function() {
-            $("#ReserveModal").modal();
-        });
-
         $("#mycarousel").carousel({interval:2000});
-
         $("#carouselButton").click(function(){
+
           if ($("#carouselButton").children("span").hasClass('fa-pause')){
               $("#mycarousel").carousel('pause');
               $("#carouselButton").children("span").removeClass('fa-pause');
